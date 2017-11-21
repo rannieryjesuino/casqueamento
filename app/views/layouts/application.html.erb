@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Casqueamento</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload', 'data-turbolinks-eval': 'false' %>
+    <%= favicon_link_tag 'cow.ico', rel: 'apple-touch-icon' %>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/cow.ico">
+  </head>
+
+  <body>
+</style>
+<%= render partial: "layouts/navbar" %>
+    <%= yield %>
+<%= render partial: "layouts/footer" %>
+
+    </div>
+  </body>
+</html>

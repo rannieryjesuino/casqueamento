@@ -1,0 +1,115 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+  @import "bootstrap";
+
+#Hoof-Bottom {
+  max-width: 400px;
+}
+
+#Hoof-Sides {
+  max-width: 500px;
+}
+
+svg path {
+  cursor: move;
+}
+
+[data-text]::after {
+  content: attr(data-text);
+}
+
+.hidden {
+  display: none;
+}
+
+path text {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+input[type="checkbox"]:checked {
+
+}
+
+.ui-header .ui-title {
+	font-size: 20px;
+	margin: .6em 10% .8em;
+	padding: 0;
+	font-family: source-sans-pro, asap, arimo, actor, GillSans, "Gill Sans MT", sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.ui-content {
+	font-family:source-sans-pro, asap, arimo, actor, GillSans, "Gill Sans MT", sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: large;
+}
+
+.ui-link-inherit {
+	font-family: source-sans-pro, asap, arimo, actor, GillSans, "Gill Sans MT", sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.ui-title {
+	font-family: source-sans-pro, asap, arimo, actor, GillSans, "Gill Sans MT", sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+
+.lesion-pic {
+	vertical-align:text-top;
+	max-width:100%;
+	height:auto;
+	margin-bottom:20px;
+	margin-right:20px;
+}
+
+@media screen and (max-width:360px) {
+	svg {
+		max-width:200px;
+		max-height:188px;
+		margin-right:25px;
+	}
+}
+
+@media screen and (max-width:1200px) {
+	svg {
+		max-width:350px;
+		max-height:287px;
+		margin-right:25px;
+	}
+}
+
+path:hover {
+	fill: #22acbf;
+}
+
+polygon:hover {
+	fill: #22acbf;
+}
+
+body{
+     background:url('cow.jpg');
+     padding: 2px;
+     background-color: "#2F4F4F";
+ }
