@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  qtd_dose: 9.99
+  dias_aplicacao: MyString
+
+two:
+  nome: MyString
+  qtd_dose: 9.99
+  dias_aplicacao: MyString
