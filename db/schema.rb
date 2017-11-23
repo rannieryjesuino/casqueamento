@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171122184314) do
+ActiveRecord::Schema.define(version: 20171123030749) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,30 @@ ActiveRecord::Schema.define(version: 20171122184314) do
     t.string "escore"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "hoofs", force: :cascade do |t|
+    t.boolean "a1"
+    t.boolean "a2"
+    t.boolean "a3"
+    t.boolean "a4"
+    t.boolean "a5"
+    t.boolean "a6"
+    t.boolean "a7"
+    t.boolean "a8"
+    t.boolean "a9"
+    t.boolean "a10"
+    t.boolean "a11"
+    t.boolean "a12"
+    t.boolean "a13"
+    t.boolean "a14"
+    t.boolean "a15"
+    t.boolean "a16"
+    t.boolean "a17"
+    t.boolean "a18"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "animal_id"
   end
 
   create_table "lesions", force: :cascade do |t|

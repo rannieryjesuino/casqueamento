@@ -1,0 +1,128 @@
+<% if @animal.errors.any? %>
+  <div id="error_explanation">
+    <div class="alert alert-error">
+      The form contains <%= pluralize(@animal.errors.count, "error") %>.
+    </div>
+    <ul>
+    <% @animal.errors.full_messages.each do |msg| %>
+      <li>* <%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+<%= form_for @animal do |f| %>
+  <div class="form-group">
+    <%= f.label :identificacao %>
+    <%= f.text_field :identificacao, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :lote %>
+    <%= f.text_field :lote, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :escore %>
+    <%= f.text_field :escore, class: "form-control" %>
+  </div>
+
+  <%= f.fields_for :hoofs do |h| %>
+  <div class="hidden">
+    <label class="form-check-label">
+      <%= h.label :"Area 1" %>
+      <%= h.check_box :a1 %>
+      <!-- <input class="form-check-input" type="checkbox" id="area0" value="option1"> Area 0 -->
+    </label>
+
+    <label class="form-check-label">
+      <%= h.label :"Area 2" %>
+      <%= h.check_box :a2 %>
+    </label>
+
+    <label class="form-check-label">
+      <%= h.label :"Area 3" %>
+      <%= h.check_box :a3 %>
+      <!-- <input class="form-check-input" type="checkbox" id="area0" value="option1"> Area 0 -->
+    </label>
+
+    <label class="form-check-label">
+      <%= h.label :"Area 4" %>
+      <%= h.check_box :a4 %>
+      <!-- <input class="form-check-input" type="checkbox" id="area0" value="option1"> Area 0 -->
+    </label>
+    <label class="form-check-label">
+      <%= h.label :"Area 5" %>
+      <%= h.check_box :a5 %>
+      <!-- <input class="form-check-input" type="checkbox" id="area0" value="option1"> Area 0 -->
+    </label>
+    <label class="form-check-label">
+      <%= h.label :"Area 6" %>
+      <%= h.check_box :a6 %>
+      <!-- <input class="form-check-input" type="checkbox" id="area0" value="option1"> Area 0 -->
+    </label>
+    <label class="form-check-label">
+      <%= h.label :"Area 7" %>
+      <%= h.check_box :a7 %>
+      <!-- <input class="form-check-input" type="checkbox" id="area0" value="option1"> Area 0 -->
+    </label>
+    <label class="form-check-label">
+      <%= h.label :"Area 8" %>
+      <%= h.check_box :a8 %>
+      <!-- <input class="form-check-input" type="checkbox" id="area0" value="option1"> Area 0 -->
+    </label>
+    <label class="form-check-label">
+      <%= h.label :"Area 9" %>
+      <%= h.check_box :a9 %>
+      <!-- <input class="form-check-input" type="checkbox" id="area0" value="option1"> Area 0 -->
+    </label>
+    <label class="form-check-label">
+      <%= h.label :"Area 10" %>
+      <%= h.check_box :a10 %>
+      <!-- <input class="form-check-input" type="checkbox" id="area0" value="option1"> Area 0 -->
+    </label>
+    <label class="form-check-label">
+      <%= h.label :"Area 11" %>
+      <%= h.check_box :a11 %>
+      <!-- <input class="form-check-input" type="checkbox" id="area0" value="option1"> Area 0 -->
+    </label>
+    <label class="form-check-label">
+      <%= h.label :"Area 12" %>
+      <%= h.check_box :a12 %>
+      <!-- <input class="form-check-input" type="checkbox" id="area0" value="option1"> Area 0 -->
+    </label>
+    <label class="form-check-label">
+      <%= h.label :"Area 13" %>
+      <%= h.check_box :a13 %>
+      <!-- <input class="form-check-input" type="checkbox" id="area0" value="option1"> Area 0 -->
+    </label>
+    <label class="form-check-label">
+      <%= h.label :"Area 14" %>
+      <%= h.check_box :a14 %>
+      <!-- <input class="form-check-input" type="checkbox" id="area0" value="option1"> Area 0 -->
+    </label>
+    <label class="form-check-label">
+      <%= h.label :"Area 15" %>
+      <%= h.check_box :a15 %>
+      <!-- <input class="form-check-input" type="checkbox" id="area0" value="option1"> Area 0 -->
+    </label>
+    <label class="form-check-label">
+      <%= h.label :"Area 16" %>
+      <%= h.check_box :a16 %>
+      <!-- <input class="form-check-input" type="checkbox" id="area0" value="option1"> Area 0 -->
+    </label>
+    <label class="form-check-label">
+      <%= h.label :"Area 17" %>
+      <%= h.check_box :a17 %>
+      <!-- <input class="form-check-input" type="checkbox" id="area0" value="option1"> Area 0 -->
+    </label>
+    <label class="form-check-label">
+      <%= h.label :"Area 18" %>
+      <%= h.check_box :a18 %>
+      <!-- <input class="form-check-input" type="checkbox" id="area0" value="option1"> Area 0 -->
+    </label>    
+  </div>
+  <% end %>
+
+  <%= render "paw" %>
+  <div class="form-group">
+    <%= f.submit "Salvar" %>
+  </div>
+<% end %>

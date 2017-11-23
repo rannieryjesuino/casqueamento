@@ -10,21 +10,20 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
+
+
  */
-  @import "bootstrap";
+  // @import "font-awesome.min";
+  @import "AdminLTE.min";
+  @import "bootstrap.min";
+  @import "skin-blue.min";
 
-#Hoof-Bottom {
-  max-width: 400px;
-}
-
-#Hoof-Sides {
+.pata svg {
   max-width: 500px;
 }
 
-svg path {
-  cursor: move;
+svg g {
+  cursor: pointer;
 }
 
 [data-text]::after {
@@ -107,9 +106,3 @@ path:hover {
 polygon:hover {
 	fill: #22acbf;
 }
-
-body{
-     background:url('cow.jpg');
-     padding: 2px;
-     background-color: "#2F4F4F";
- }

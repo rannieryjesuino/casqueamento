@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  a1: false
+  a2: false
+  a3: false
+  a4: false
+  a5: false
+  a6: false
+  a7: false
+  a8: false
+  a9: false
+  a10: false
+  a11: false
+  a12: false
+  a13: false
+  a14: false
+  a15: false
+  a16: false
+  a17: false
+  a18: false
+
+two:
+  a1: false
+  a2: false
+  a3: false
+  a4: false
+  a5: false
+  a6: false
+  a7: false
+  a8: false
+  a9: false
+  a10: false
+  a11: false
+  a12: false
+  a13: false
+  a14: false
+  a15: false
+  a16: false
+  a17: false
+  a18: false

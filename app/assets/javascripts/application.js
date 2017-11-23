@@ -14,6 +14,7 @@
 //= require jquery3
 //= require popper
 //= require bootstrap
+//= require app.min
 //= require turbolinks
 //= require_tree .
 
@@ -26,24 +27,36 @@ $(document).ready(function() {
   // });
 
   function validate_check(id_zone, id_check) {
-    $(id_zone).on('click', function() {
-      var cbox = $(id_check);
-      var value = cbox.prop('checked');
-      cbox.prop('checked', !value);
-    });
+    if (window.location.pathname == '/animals/new') {
+      $(id_zone).on('click', function() {
+        var cbox = $(id_check);
+
+        var color = $(id_zone).attr('fill');
+        var value = cbox.prop('checked');
+        cbox.prop('checked', !value);
+        console.log("O valor é " + value);
+        if(!value) {
+          $(id_zone).css("fill", "red");
+        } else {
+          $(id_zone).css("fill", "");
+        }
+      });      
+    }
   }
 
-  validate_check('#zone1d', '#area1d');
-  validate_check('#zone2d', '#area2d');
-  validate_check('#zone3d', '#area3d');
-  validate_check('#zone4d', '#area4d');
-  validate_check('#zone5d', '#area5d');
-  validate_check('#zone6d', '#area6d');
-  validate_check('#zone1e', '#area1e');
-  validate_check('#zone2e', '#area2e');
-  validate_check('#zone3e', '#area3e');
-  validate_check('#zone4e', '#area4e');
-  validate_check('#zone5e', '#area5e');
-  validate_check('#zone0', '#area0');
-  validate_check('#zone10', '#area10');
+  validate_check('#zone1e', '#animal_hoofs_attributes_0_a7');
+  validate_check('#zone2e', '#animal_hoofs_attributes_0_a6');
+  validate_check('#zone3e', '#animal_hoofs_attributes_0_a3');
+  validate_check('#zone4e', '#animal_hoofs_attributes_0_a4');
+  validate_check('#zone5e', '#animal_hoofs_attributes_0_a5');
+  validate_check('#zone6e', '#animal_hoofs_attributes_0_a2');
+
+  validate_check('#zone1d', '#animal_hoofs_attributes_0_a12');
+  validate_check('#zone2d', '#animal_hoofs_attributes_0_a13');
+  validate_check('#zone3d', '#animal_hoofs_attributes_0_a9');
+  validate_check('#zone4d', '#animal_hoofs_attributes_0_a10');
+  validate_check('#zone5d', '#animal_hoofs_attributes_0_a11');
+  validate_check('#zone6d', '#animal_hoofs_attributes_0_a8');
+  validate_check('#zone0', '#animal_hoofs_attributes_0_a15');
+  validate_check('#zone10', '#animal_hoofs_attributes_0_a1');
 });
