@@ -1,0 +1,13 @@
+<%= form_for @medication do |f| %>
+<%= f.label :nome %>
+<%= f.text_field :nome %>
+
+<%= f.label :qtd_dose %>
+<%= f.number_field :qtd_dose %>
+
+<%= f.label :dias_aplicacao %>
+<%= f.text_field :dias_aplicacao %>
+
+<%= f.submit "Enviar" %>
+
+<% end %>

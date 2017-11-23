@@ -4,7 +4,7 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <%= image_tag "img.jpg", class: "user-image", alt: "User image" %>
+          <%= image_tag "img.jpg", class: "user-image img-circle", alt: "User image" %>
         </div>
         <div class="pull-left info">
           <p>Alexandra Pierce</p>
@@ -43,6 +43,11 @@
             <li>
               <%= link_to new_animal_path do %>
                 <i class="fa fa-circle-o"></i>Novo Animal
+              <% end %>
+            </li>
+            <li>
+              <%= link_to animals_path do %>
+                <i class="fa fa-circle-o"></i>Lista de animais
               <% end %>
             </li>
             <li><a href="#"><i class="fa fa-circle-o"></i>Lista de animais</a></li>
