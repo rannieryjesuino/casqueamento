@@ -1,0 +1,24 @@
+<%= form_for @animal do |f| %>
+  <div class="form-group">
+    <%= f.label :identificacao %>
+    <%= f.text_field :identificacao, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :lote %>
+    <%= f.text_field :lote, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :escore %>
+    <%= f.text_field :escore, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    f.collection_check_boxes(:paws, :author_ids, Author.all, :id, :name_with_initial)
+
+    <%= f.label :
+  </div>
+  <%= render "paw" %>
+  <div class="form-group">
+    <%= f.submit "Salvar", class: "btn btn-primary" %>
+  </div>
+<% end %>

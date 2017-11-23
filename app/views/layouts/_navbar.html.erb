@@ -1,17 +1,63 @@
-<nav class="navbar navbar-expand-lg navbar-inverse bg-inverse">
-<a style="color:white" class="navbar-brand centered text-center" href="#">Sistema de Casqueamento</a>
-<div class="collapse navbar-collapse" id="navbarSupportedContent">
- <ul>
-   <li>
-     <a class="nav-link" href="#">Menu <span class="sr-only">(current)</span></a>
-   </li>
-   <li class="nav-item">
-     <a class="nav-link" href="#">Acens</a>
-   </li>
- </ul>
- <form class="form-inline my-2 my-lg-0">
-   <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-   <button class="btn btn-danger my-2 my-sm-0" type="submit">Pesquisar</button>
- </form>
-</div>
-</nav>
+<header class="main-header">
+    <!-- Logo -->
+    <%= link_to root_path, class: "logo" do %>
+      <span class="logo-mini">D.M.</span>
+      <span class="logo-lg">Demo <i class="fa fa-paw"></i></span>
+    <% end %>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <!-- Notifications: style can be found in dropdown.less -->
+          <!-- User Account: style can be found in dropdown.less -->
+          <li class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <%= image_tag "img.jpg", class: "user-image", alt: "User image" %>
+              <span class="hidden-xs">Alexandra Pierce</span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- User image -->
+              <li class="user-header">
+                <%= image_tag "img.jpg", class: "user-image", alt: "User image" %>
+
+                <p>
+                  Alexandra Pierce - Admin
+                  <small>Member since Nov. 2017</small>
+                </p>
+              </li>
+              <!-- Menu Body -->
+              <li class="user-body">
+                <div class="row">
+                  <div class="col-xs-4 text-center">
+                    <a href="#">Editar Perfil</a>
+                  </div>
+                  <div class="col-xs-4 text-center">
+                    <a href="#">None</a>
+                  </div>
+                  <div class="col-xs-4 text-center">
+                    <a href="#">None</a>
+                  </div>
+                </div>
+                <!-- /.row -->
+              </li>
+              <!-- Menu Footer-->
+              <li class="user-footer">
+                <div class="pull-left">
+                  <a href="#" class="btn btn-default btn-flat">Profile</a>
+                </div>
+                <div class="pull-right">
+                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <!-- Control Sidebar Toggle Button -->
+        </ul>
+      </div>
+    </nav>
+  </header>

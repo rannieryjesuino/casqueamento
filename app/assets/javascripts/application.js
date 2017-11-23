@@ -14,6 +14,7 @@
 //= require jquery3
 //= require popper
 //= require bootstrap
+//= require app.min
 //= require turbolinks
 //= require_tree .
 
@@ -28,8 +29,16 @@ $(document).ready(function() {
   function validate_check(id_zone, id_check) {
     $(id_zone).on('click', function() {
       var cbox = $(id_check);
+
+      var color = $(id_zone).attr('fill');
       var value = cbox.prop('checked');
       cbox.prop('checked', !value);
+      console.log("O valor é " + value);
+      if(!value) {
+        $(id_zone).css("fill", "red");
+      } else {
+        $(id_zone).css("fill", "");
+      }
     });
   }
 
@@ -44,6 +53,7 @@ $(document).ready(function() {
   validate_check('#zone3e', '#area3e');
   validate_check('#zone4e', '#area4e');
   validate_check('#zone5e', '#area5e');
+  validate_check('#zone6e', '#area6e');
   validate_check('#zone0', '#area0');
   validate_check('#zone10', '#area10');
 });

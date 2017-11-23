@@ -1,22 +1,41 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Casqueamento</title>
+    <title>Casqueamento - MVP</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload', 'data-turbolinks-eval': 'false' %>
     <%= favicon_link_tag 'cow.ico', rel: 'apple-touch-icon' %>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="img/cow.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
-  <body>
-</style>
-<%= render partial: "layouts/navbar" %>
-    <%= yield %>
-<%= render partial: "layouts/footer" %>
+  <body class="skin-blue sidebar-mini wysihtml5-supported">
 
-    </div>
-  </body>
-</html>
+    <body class="skin-blue sidebar-mini wysihtml5-supported">
+      <div class="wrapper">
+        <!--navbar -->
+        <%= render 'layouts/navbar' %>
+        <!-- end navbar -->
+        <!-- sidebar -->
+        <%= render 'layouts/sidebar' %>
+        <!-- end sidebar -->
+        <!-- container -->
+        <div class="content-wrapper">
+          <%= render 'layouts/content_header', title_header: "Painel de controle", path: ["Home", "Dashboard"] %>
+          <section class="content">
+            <% if flash[:alert] %>
+              <div class="alert alert-success"><%= flash[:alert] %></div>
+            <% end %>
+            <%= render 'layouts/statistics'%>
+            <%= yield %>
+          </section>
+
+        </div>
+        <!-- end container -->
+
+      </div>
+    </body>
+  </html>
